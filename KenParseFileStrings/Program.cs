@@ -6,7 +6,7 @@ namespace KenParseFileStrings {
 
             var vue = new Vue();
             var lines = vue.LoadFile(@"C:\repos\KenParseFileStrings\KenParseFileStrings\vue.txt");
-            vue.ParseLines(lines);
+            var glinputCollection = vue.ParseLines(lines);
 
         }
     }
