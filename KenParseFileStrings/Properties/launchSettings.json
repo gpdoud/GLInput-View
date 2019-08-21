@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KenParseFileStrings": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\repos\\KenParseFileStrings\\KenParseFileStrings\\vue.txt\""
+    }
+  }
+}

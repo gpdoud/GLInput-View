@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace KenParseFileStrings {
-
+    /// <summary>
+    /// The GLInput class represents a layout of the data being sent into the system
+    /// as a fixed format text line.
+    /// </summary>
     public class GLInput {
 
         public string company_code { get; set; }
