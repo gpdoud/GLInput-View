@@ -34,6 +34,9 @@ namespace KenParseFileStrings {
 
         private string ParseField(string line, string fieldname,  Dictionary<string, FieldLayout> layout) {
             var fieldLayout = layout[fieldname];
+            if(fieldLayout.Start + fieldLayout.Len > line.Length) {
+                return string.Empty;
+            }
             return line.Substring(fieldLayout.Start, fieldLayout.Len).Trim();
         }
 

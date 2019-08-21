@@ -26,5 +26,31 @@ namespace KenParseFileStrings {
         public string tax_status { get; set; }
         public string memo_code { get; set; }
 
+        public string ToCsv() {
+            var csvStrings = new List<string> {
+                this.company_code,
+                this.plan_code,
+                this.source,
+                this.eas_account,
+                this.sap_account,
+                this.profit_center,
+                this.policy_number,
+                this.tran_date,
+                this.calendar_date,
+                this.ref_id,
+                this.amount.ToString(),
+                this.dbcr_ind,
+                this.desc,
+                this.LOB,
+                this.budget_center,
+                this.rein_company,
+                this.state,
+                this.tax_status,
+                this.memo_code
+            };
+            var csvLine = string.Join(',', csvStrings);
+            return csvLine;
+        }
+
     }
 }
