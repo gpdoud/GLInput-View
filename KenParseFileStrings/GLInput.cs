@@ -27,7 +27,7 @@ namespace KenParseFileStrings {
         public string memo_code { get; set; }
 
         public string ToCsv() {
-            var csvStrings = new List<string> {
+            var csvStrings = new string[] {
                 this.company_code,
                 this.plan_code,
                 this.source,
