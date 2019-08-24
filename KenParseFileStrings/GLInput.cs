@@ -16,10 +16,15 @@ namespace KenParseFileStrings {
         public string sap_account { get; set; }
         public string profit_center { get; set; }
         public string policy_number { get; set; }
-        public string tran_date { get; set; }
-        public string calendar_date { get; set; }
+        //public string tran_date { get; set; }
+        public string tran_date_month { get; set; }
+        public string tran_date_day { get; set; }
+        public string tran_date_year { get; set; }
+        //public string calendar_date { get; set; }
+        public string cal_date_year { get; set; }
+        public string cal_date_month { get; set; }
         public string ref_id { get; set; }
-        public decimal amount { get; set; }
+        public string amount { get; set; }
         public string dbcr_ind { get; set; }
         public string desc { get; set; }
         public string LOB { get; set; }
@@ -30,6 +35,8 @@ namespace KenParseFileStrings {
         public string memo_code { get; set; }
 
         public string ToCsv() {
+            // this array dictates what order the data
+            // comes out in the CSV file.
             var csvStrings = new string[] {
                 this.company_code,
                 this.plan_code,
@@ -38,10 +45,13 @@ namespace KenParseFileStrings {
                 this.sap_account,
                 this.profit_center,
                 this.policy_number,
-                this.tran_date,
-                this.calendar_date,
+                this.tran_date_year,
+                this.tran_date_month,
+                this.tran_date_day,
+                this.cal_date_year,
+                this.cal_date_month,
                 this.ref_id,
-                this.amount.ToString(),
+                this.amount,
                 this.dbcr_ind,
                 this.desc,
                 this.LOB,
